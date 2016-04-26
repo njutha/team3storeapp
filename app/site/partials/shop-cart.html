@@ -1,0 +1,33 @@
+<nav>
+	<div class="content-wrapper">
+		<ul class="left-nav">
+			<li><img src="assets/img/logo_example.png"></li>
+		</ul>
+		<ul class="right-nav">
+			<li><i class="fa fa-shopping-cart"></i><span class="cart">Shopping Cart</span></li>
+		</ul>
+	</div>
+</nav>
+
+
+<section class="product-view" role="product-view">
+<h1 class=""> My Orders </h1>
+	<table class="products-list table">
+		<tr>
+			<th>Category</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr ng-repeat="items in ctrl.cart track by $index">
+			<td>{{items.category}}</td>
+			<td>{{items.name}}</td>
+			<td>{{items.price}}</td>
+			<td>1</td>
+			<td>{{items.price}}</td>
+		</tr>
+	</table>
+	<button ng-click="ctrl.submitOrder()">Submit</button>
+
+<section> 

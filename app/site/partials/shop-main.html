@@ -1,0 +1,121 @@
+<nav class="topheader">
+	<div class="content-wrapper">
+		<ul class="left-nav">
+			<li><img src="assets/img/logo_logo.png" class="first_logo"></li>
+		</ul>
+		<ul class="right-nav">
+			<li>
+				<i class="fa fa-shopping-cart"></i>
+				<span class="cart" ng-click="ctrl.openCart()">Shopping Cart</span>
+				<!-- count how many items in cart -->
+				<span style="border: 2px solid red">{{ctrl.cart.length}}</span>
+			</li>
+			<li>
+			<div>
+			
+			</div>
+			</li>
+		</ul>
+		<ul class="left-nav">
+			<li><a ui-sref="auth">Admin Login</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<section class="top-content" role="topbanner">
+	<div class="content-wrapper">
+		<div class="table-view">
+			<div class="table-cell">
+				<div class="content">		
+					<h1>
+						
+
+					</h1>
+					<h3>
+				
+					</h3>
+
+
+					<div class="search_bar">
+
+					<div>
+
+						<form>
+							<!-- TO DO #3: ENABLE PRODUCT SEARCH -->
+							<div class="form-container">
+								<input type="text" class="form-control"  placeholder="Search for a brand or item" >
+								<a class="search-btn"><img src="assets/img/icon-search@2x.png"></a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="secondary-nav" role="sub-nav">
+	<div class="content-wrapper">
+		<!-- TO DO #3: SET CATEGORY SEARCH AND SET FOCUS CLASS-->
+		<ul class="product-nav">
+			<li ><a>All</a></li>
+			<li ><a>Basketball</a></li>
+			<li ><a>Soccer</a></li>
+			<li ><a>Football</a></li>
+			<li ><a>Baseball</a></li>
+			<li ><a>Accessories</a></li>
+		</ul>
+	</div>
+</section>
+
+<section class="about">
+	<div>
+		<!--where to enter main about text (after products are moved)-->
+	</div>
+</section>
+
+<section class="product-view" role="product-view">
+	<div class="content-wrapper">
+		<div class="row">
+			<!-- TODO #3: SHOW PRODUCTS -->
+			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products">
+				<div id="product-card" class="product-card">
+					<div class="product-buy">
+						<div class="table-view">
+							<div class="table-cell">
+								<i ng-click="ctrl.addToCart(product)" class="fa fa-shopping-cart"></i>
+							</div>
+						</div>
+					</div>
+					<!-- SET PRODUCT IMAGE -->
+					<div class="product-img"  ng-click="ctrl.viewProduct(product)" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
+					</div>
+
+					<div class="product-info">
+						<div class="product-name">
+							<!-- SET PRODUCT NAME -->
+							{{product.name}}
+							
+						</div>
+						<div class="product-brand">
+							<!-- SET PRODUCT Description -->
+							<em>{{product.description}}</em>
+						</div>
+						<div class="product-cost">
+							<!-- SET PRODUCT PRICE WITH FILTER -->
+							{{product.price}}
+			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<nav class="footer">
+	<div class="footer_text">
+		Welcome to First Pick, your one-stop shop for sports apparel.
+	</div>
+</nav>

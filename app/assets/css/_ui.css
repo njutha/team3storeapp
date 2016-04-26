@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic);
+
+html,body{
+	margin:0;
+	height:100%;
+}
+
+body{
+	color:#666;
+	font-size:100%;
+}
+
+/*
+Globals
+*/
+
+.topheader {
+	background-color: white;
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	height: 25%;
+	
+}
+.search_bar {
+	position: relative;
+	margin: auto;
+	top: 100px;
+
+}
+
+.about {
+	position: relative;
+	top: 500px;
+
+}
+.first_logo {
+	width: 25%;
+	position: relative;
+	margin-left: 150px;
+	top: 10px;
+}
+.wrapper{
+	height:100%;
+}
+.content-wrapper{
+	max-width:70.5em;
+	margin:0px auto;
+	height:100%;
+}
+
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.table-view{
+	display: table;
+	height:100%;
+	width:100%;
+}
+
+.table-cell{
+	display:table-cell;
+	height:100%;
+	vertical-align: middle;
+	width:100%;
+}
+
+a{
+	text-decoration: none;
+	color:#333;
+}
+/*
+Nav
+*/
+
+nav{
+	height:155px;
+	line-height:155px;
+	color:#000000;
+	border-bottom:1px solid #d8d8d8;
+	box-shadow: 0 4px 2px -2px #d8d8d8;
+}
+
+nav .left-nav{
+	float:left;
+	margin:0px 0px 0px 70px;
+	vertical-align: top;
+}
+
+nav .right-nav{
+	float:right;
+	margin:0px 70px 0px 0px;
+	vertical-align: top;
+}
+
+nav .fa-shopping-cart{
+	margin-right:40px;
+	font-size:2rem;
+	position: relative;
+	top: -100px;
+	left: 250px;
+	z-index: 1;
+}
+nav .cart{
+	font-size:1.6rem;
+	z-index: 1;
+	position: relative;
+	left: 180px;
+	top: -120px;
+}
+
+/*
+Top-content
+*/
+.top-content{
+	width:100%;
+	height:calc(70% - 150px);
+	background:url('../img/woman.jpg');
+	background-size:cover;
+	background-position:center center;
+	text-align: center;
+
+	position: relative;
+	top: 250px;
+}
+
+.top-content h1{
+	color:white;
+	font-size:4rem;
+	position: absolute;
+	top: 90px;
+	width: 100%;
+}
+
+.top-content h3{
+	color:white;
+	font-size:2rem;
+	margin:100px 0px;
+	letter-spacing:0.05rem;
+	font-weight:100 !important;
+	position: absolute;
+}
+
+.top-content .content{
+	margin:100px auto;
+}
+
+.top-content form{
+	position: relative;
+	width:38rem;
+	margin:-80px auto;
+}
+.top-content form input{
+	height:40px;
+	display: inline-block;
+}
+
+.top-content .search-btn{
+	position: absolute;
+	background:#000000;
+	height:40px;
+	width:40px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	vertical-align: middle;
+	top:0px;
+	right:0px;
+
+}
+.top-content .search-btn img{
+	width:18px;
+	margin-top:11px;
+}
+
+
+/*
+Sub Nav
+*/
+.secondary-nav{
+	height:55px;
+	line-height:55px;
+	position: relative;
+	top: -185px;
+
+	background: white;
+}
+.product-nav ul{
+	font-size:0;
+	position: relative;
+}
+.product-nav li{
+	width:16%;
+	text-align:center;
+	display: inline-block;
+	font-size:1.5rem;
+	font-weight:200;
+}
+.product-nav li a:hover{
+	color:#000000;
+	border:none;
+	font-weight:400;
+	cursor:pointer;
+	cursor:hand;
+	text-decoration: none;
+}
+.product-nav li.focus > a{
+	
+	color:#000000;
+	font-weight:400;
+	border-bottom:2px solid #000000;
+	padding:4px 6px;
+}
+
+
+/*
+Product view
+*/
+
+.product-view{
+	background: whitesmoke;
+	padding:40px;
+}
+
+.product-view .product-card{
+	width:100%;
+	background:white;
+	font-size:1.5rem;
+	text-align:center;
+	position: relative;
+	padding: 10px;
+	margin: 10px;
+	top: 180px;
+}
+
+#product-card .product-buy{
+	position: absolute;
+	background: #000000;
+	border-radius:100%;
+	color:white;
+	height:30px;
+	width:30px;
+	top:10px;
+	right:10px;
+	bottom: 10px;
+}
+
+#product-card .product-buy:hover .fa{
+	color:whitesmoke;
+	cursor: pointer;
+	cursor:hand;
+}
+#product-card .product-img{
+	width:100%;
+	height:200px;
+}
+
+#product-card .product-info{
+	padding:10px;
+	letter-spacing: 0.05rem;
+}
+#product-card .product-name{
+	font-weight:600;
+}
+
+#product-card .product-brand{
+	font-style:italic;
+	font-weight:200;
+	font-size:1.2rem;
+}
+
+#product-card .product-cost{
+	color:#000000;
+	font-weight:500;
+	margin:10px 0px;
+}
+
+.footer {
+	position: fixed;
+	z-index: 1;
+	bottom: -20px;
+	background-color: white;
+	width: 98%;
+	height: 10%;
+	left: 10px;
+	margin: auto;
+	text-align: center;
+	padding: 0px;
+}
+
+.footer_text {
+	position: fixed;
+	z-index: 1;
+	bottom: -50px;
+	left: 15px;
+	width: 100%;
+}
