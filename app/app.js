@@ -79,6 +79,12 @@
 				templateUrl:'site/partials/admin-edit-product.html',
 			})
 
+			.state('admin.orders',{
+				url:'/orders',
+				controller:'OrdersCtrl as ctrl',
+				templateUrl:'site/partials/admin-orders.html',
+			})
+
 			.state('auth',{
 				url:'/auth',
 				templateUrl:'site/partials/auth-main.html',
