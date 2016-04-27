@@ -18,6 +18,8 @@
 			<th>Name</th>
 			<th>Price</th>
 			<th>Quantity</th>
+			<th>Total</th>
+			<th>Remove</th>
 			<th>&nbsp;</th>
 		</tr>
 		<tr ng-repeat="items in ctrl.cart track by $index">
@@ -26,6 +28,7 @@
 			<td>{{items.price}}</td>
 			<td>1</td>
 			<td>{{items.price}}</td>
+			<td><button ng-click="ctrl.removeFromCart(items)">Remove</button></td>
 		</tr>
 	</table>
 	<button ng-click="ctrl.submitOrder()">Submit</button>
