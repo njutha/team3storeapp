@@ -1,4 +1,4 @@
-<h3>Products</h3>
+<h3>YOUR ORDERS HERE</h3>
 
 <!-- <div ng-hide="ctrl.is_products">
 	<p>
@@ -7,17 +7,19 @@
 </div> -->
 
 <!-- <div ng-show="ctrl.is_products"> -->
-	<table class="products-list table">
+	<table class="products-list table custom">
 		<tr>
-			<th>Category</th>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Quantity</th>
+			<th>CATEGORY</th>
+			<th>NAME</th>
+			<th>IMAGE</th>
+			<th>PRICE</th>
+			<th>QUANTITY</th>
 			<th>&nbsp;</th>
 		</tr>
 		<tr ng-repeat="product in ctrl.orders track by $index">
 			<td>{{product.category}}</td>
 			<td>{{product.name}}</td>
+			<td><img src="{{product.image}}" class="admin_images"></td>
 			<td>{{product.price}}</td>
 			<td>1</td>
 		</tr>

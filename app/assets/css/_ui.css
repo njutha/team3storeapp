@@ -61,6 +61,17 @@ ul{
 	width:100%;
 }
 
+.custom {
+	background-color: white;
+	color: black;
+	font-size: 15px;
+}
+
+.admin_images {
+	height: 150px;
+	border: 2px solid black;
+}
+
 .table-cell{
 	display:table-cell;
 	height:100%;
@@ -116,6 +127,11 @@ nav .cart{
 	background-color: white;
 }
 
+.sales {
+	margin: auto;
+	margin-left: 20%;
+}
+
 .top_font {
 	font-size: 15px;
 }
@@ -150,6 +166,7 @@ nav .cart{
 	color: black;
 	text-transform: uppercase;
 	font-weight: lighter;
+	font-family: arial;
 }
 
 #shop_subheader{

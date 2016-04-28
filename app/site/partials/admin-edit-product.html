@@ -1,8 +1,8 @@
 <h3>
-	Edit Product
+	EDIT YOUR PRODUCT
 </h3>
 <!-- 	TODO #2: Populate fields with product data -->
-<article class="product-frm">
+<article class="product-frm custom">
 		<div>
 			<label>Name</label>
 			<input type="text" name="name" value={{ctrl.product.name}} ng-model="ctrl.product.name" placeholder="Enter name of product here" required>
@@ -28,9 +28,9 @@
 			<label>Quantity</label>
 			<input type="number" name="quantity"  value={{ctrl.product.quantity}} placeholder="How many?" ng-model="ctrl.product.quantity" required>
 		</div>
-		<div>
-			<button type="submit" ng-click="ctrl.updateProduct()">{{ctrl.product_update_btn}}</button>
-			<button type="submit" ng-click="ctrl.deleteProduct()" >{{ctrl.product_delete_btn}}</button>
+		<div><BR>
+			<button type="submit" class="btn btn-info" ng-click="ctrl.updateProduct()">{{ctrl.product_update_btn}}</button>
+			<button type="submit" class="btn btn-info" ng-click="ctrl.deleteProduct()" >{{ctrl.product_delete_btn}}</button>
 
 		</div>
 </article>

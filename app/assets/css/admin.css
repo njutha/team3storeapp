@@ -8,25 +8,30 @@
 #admin h3{
 	font-size:3.0rem;
 	color:black;
-	text-decoration: underline;
 }
 #admin .nav-panel{
 	background:#ffffff;
 	padding:40px;
 	width:25%;
 	height:100%;
-	float:left;
+	float:right;
 	font-size:1rem;
+	text-align: right;
 }
 
 .soccer_logo {
-	width: 60%;
+	width: 100%;
 }
 
 #admin .nav-panel ul{
 	list-style: none;
 	padding:0px;
 	margin:0px 0px;
+}
+
+.admin_images {
+	height: 150px;
+	border: 2px solid black;
 }
 
 #admin .nav-panel ul li{

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,13 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#"><img id="ss-logo" src="assets/img/ss-logo.png"></a>
+      <a href="#"><img id="ss-logo" src="assets/img/hang-shop.png"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">HOME PAGE <span class="sr-only">(current)</span></a></li>
         <li><a ng-click="ctrl.openCart()"><img src="assets/img/img-cart.png" style="width: 30px;"></a></li>
         <li id="cart_total">{{ctrl.cart.length}}</li>
       </ul>
@@ -24,26 +24,28 @@
 
 
 <section class="product-view" role="product-view">
-<h1 class=""> My Order </h1>
-	<table class="products-list table">
+<h1 class="">CHECK OUT YOUR ORDER</h1>
+	<table class="products-list table custom">
 		<tr>
-			<th>Category</th>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Quantity</th>
-			<th>Total</th>
-			<th>Remove</th>
+			<th>CATEGORY</th>
+			<th>NAME</th>
+			<TH>IMAGE</TH>
+			<th>PRICE</th>
+			<th>QUANTITY</th>
+			<th>TOTAL</th>
+			<th>REMOVE</th>
 			<th>&nbsp;</th>
 		</tr>
 		<tr ng-repeat="items in ctrl.cart track by $index">
 			<td>{{items.category}}</td>
 			<td>{{items.name}}</td>
+			<td><img src="{{product.image}}" class="admin_images"></td>
 			<td>{{items.price}}</td>
 			<td>1</td>
 			<td>{{items.price}}</td>
-			<td><button ng-click="ctrl.removeFromCart(items)">Remove</button></td>
+			<td><button ng-click="ctrl.removeFromCart(items)" class="btn btn-info">REMOVE FROM CART</button></td>
 		</tr>
 	</table>
-	<button ng-click="ctrl.submitOrder()">Submit</button>
+	<button ng-click="ctrl.submitOrder()" class="btn btn-info">SUBMIT YOUR ORDER</button>
 
 <section> 
