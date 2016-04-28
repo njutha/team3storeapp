@@ -23,7 +23,7 @@
 		}
 
 		shopVm.cart = productSrv.cart;
-		shopVm.orders;
+		shopVm.orders = productSrv.orders;
 		shopVm.addToCart = productSrv.addToCart;
 		
 		// console.log(product.data.product);
@@ -47,11 +47,12 @@
 
 		shopVm.submitOrder = function(){
 			// alert("CHECKCHECK")
-			shopVm.orders = shopVm.cart
+			for(var i = 0; i<shopVm.cart.length; i++){
+				shopVm.orders.push(shopVm.cart[i])
+			}
 			console.log("this is the orders")
 			console.log(shopVm.orders)
 			shopVm.cart.splice(0,shopVm.cart.length);
-
 			console.log("this is the cart")
 			console.log(shopVm.cart)
 		}

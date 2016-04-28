@@ -9,6 +9,7 @@
 		//public variables
 		self.products = [];
 		self.cart = [];
+		self.orders = [];
 
 		//public functions
 		self.getProduct = getProduct;

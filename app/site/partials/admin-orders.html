@@ -15,12 +15,11 @@
 			<th>Quantity</th>
 			<th>&nbsp;</th>
 		</tr>
-		<tr ng-repeat="product in ctrl.products">
+		<tr ng-repeat="product in ctrl.orders track by $index">
 			<td>{{product.category}}</td>
 			<td>{{product.name}}</td>
 			<td>{{product.price}}</td>
 			<td>{{product.quantity}}</td>
-			<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
 		</tr>
 	</table>
 </div>

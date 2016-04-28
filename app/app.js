@@ -81,8 +81,13 @@
 
 			.state('admin.orders',{
 				url:'/orders',
-				controller:'OrdersCtrl as ctrl',
+				controller:'ShopCtrl as ctrl',
 				templateUrl:'site/partials/admin-orders.html',
+				resolve:{
+					product: function() {
+						return undefined;
+					}
+				}
 			})
 
 			.state('auth',{
