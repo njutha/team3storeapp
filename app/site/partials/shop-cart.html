@@ -47,6 +47,29 @@
 			<td><button ng-click="ctrl.removeFromCart(items)" class="btn btn-info">REMOVE FROM CART</button></td>
 		</tr>
 	</table>
+	<BR>
+	<h1 class="">ADD YOUR BILLING INFORMATION</h1><BR>
+
+	<form name="add-billing" class="billing_form">
+		<div>
+			<label>YOUR NAME</label>
+			<input type="text" name="name" placeholder="Enter name" ng-model="ctrl.name" required>
+		</div><BR>
+		<div>
+			<label>YOUR EMAIL</label>
+			<input type="text" name="image" placeholder="Enter email" ng-model="ctrl.image" required>
+		</div><BR>
+		<div>
+			<label>YOUR PHONE NUMBER</label>
+			<input type="text" name="name" ng-model="ctrl.description" placeholder="Enter phone number" required></input>
+		</div><BR>
+
+		<div>
+			<label>YOUR ADDRESS</label>
+			<input type="text" name="name" ng-model="ctrl.description" placeholder="Enter address" required></textarea>
+		</div>
+	</form>
+	<BR>
 	<button ng-click="ctrl.submitOrder()" class="btn btn-info">SUBMIT YOUR ORDER</button>
 
 <section> 

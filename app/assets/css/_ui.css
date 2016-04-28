@@ -400,6 +400,7 @@ Product view
 	text-align: center;
 	padding: 0px;
 }
+
 .navbar2 {
 	position: absolute;
 	top: 100%;
@@ -412,4 +413,10 @@ Product view
 	bottom: -50px;
 	left: 15px;
 	width: 100%;
+}
+
+.billing_form {
+	background-color: white;
+	font-size: 20px;
+	padding: 5px;
 }

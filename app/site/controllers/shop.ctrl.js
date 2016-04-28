@@ -58,7 +58,8 @@
 			console.log(shopVm.orders)
 			shopVm.cart.splice(0,shopVm.cart.length);
 			console.log("this is the cart")
-			console.log(shopVm.cart)
+			console.log(shopVm.cart);
+			$state.go('confirmation');
 		}
 
 		shopVm.removeFromCart = function(productId){

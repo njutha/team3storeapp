@@ -30,6 +30,22 @@
 				url:'/about',
 				templateUrl:'site/partials/about.html',
 				controller:'ShopCtrl as ctrl',
+				resolve:{
+					product:function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
+			})
+
+			.state('confirmation', {
+				url:'/confirmation',
+				templateUrl:'site/partials/confirmation.html',
+				controller:'ShopCtrl as ctrl',
+				resolve:{
+					product:function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
 			})
 
 			//for contact page
@@ -37,6 +53,11 @@
 				url:'/contact',
 				templateUrl:'site/partials/contact.html',
 				controller:'ShopCtrl as ctrl',
+				resolve:{
+					product:function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
 			})
 
 			//for careers page
@@ -44,6 +65,11 @@
 				url:'/careers',
 				templateUrl:'site/partials/careers.html',
 				controller:'ShopCtrl as ctrl',
+				resolve:{
+					product:function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
 			})
 
 

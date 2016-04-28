@@ -28,7 +28,7 @@
       		</form>
         </li>
         
-        <li><a ui-sref="shop.cart"><img src="assets/img/img-cart.png" id="shop-cart"></a></li>
+        <li><a ui-sref="cart"><img src="assets/img/img-cart.png" id="shop-cart"></a></li>
         <li id="cart_total" class="number">{{ctrl.cart.length}}</li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -45,12 +45,12 @@
 	<center><BR><BR>
 		 <div class="pagination">
  
-		    <button class="btn btn-default" ng-click="ctrl.curPage = ctrl.curPage - 1" ng-disabled="ctrl.curPage == 0">
+		    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage - 1" ng-disabled="ctrl.curPage == 0">
 		    </button>
     
     			PAGE {{ctrl.curPage + 1}} OF {{ctrl.numPages}}
     
-		    <button class="btn btn-default" ng-click="ctrl.curPage = ctrl.curPage + 1" ng-disabled="ctrl.curPage >= 2">
+		    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage + 1" ng-disabled="ctrl.curPage >= 2">
 		    </button>
   		</div>
 	</center>
