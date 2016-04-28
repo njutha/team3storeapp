@@ -149,6 +149,15 @@ nav .cart{
 	font-weight: lighter;
 }
 
+#shop-cart {
+	width: 30px;
+}
+
+#shop-cart:hover {
+	cursor: pointer;
+	cursor: hand
+}
+
 /*
 Top-content
 */

@@ -50,7 +50,8 @@
 			shopVm.orders = shopVm.cart
 			console.log("this is the orders")
 			console.log(shopVm.orders)
-			shopVm.cart = []
+			shopVm.cart.splice(0,shopVm.cart.length);
+
 			console.log("this is the cart")
 			console.log(shopVm.cart)
 		}
