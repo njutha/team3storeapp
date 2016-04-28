@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,14 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#"><img id="ss-logo" src="assets/img/ss-logo.png"></a>
+      <a href="#"><img id="ss-logo" src="assets/img/hang-shop.png"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li class="dropdown"><a> <span>Category: </span>
+      <ul class="nav navbar-nav navbar-right top_font">
+        <li><a href="#">HOME PAGE <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown"><a> <span>CATEGORY: </span>
           <select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
 			</select>
             <!-- <li role="separator" class="divider"></li>
@@ -24,7 +24,7 @@
         <li>
         	<form class="navbar-form navbar-left" role="search">
        			<div class="form-group">
-          			<input type="text" class="form-control" placeholder="Search for an item.." ng-model="srch.result">
+          			<input type="text" class="form-control" placeholder="SEARCH THE STORE" ng-model="srch.result">
         		</div>
         		<!-- <button type="submit" class="btn btn-default">Go</button> -->
       		</form>
@@ -50,7 +50,7 @@
 </div>	 -->
 
 <section>
-	<h1 id="shop_header">SHOP</h1>
+	<h1 id="shop_header">WELCOME TO THE HANG SHOP</h1>
 	<h3 id="shop_subheader">{{ctrl.category}}</h3> <!--should dynamically change -->
 	<div class="content-wrapper">
 		<div class="row">
@@ -134,11 +134,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Contact <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About</a></li>
+        <li class="active"><a href="#">CONTACT US <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#</li>
+        <li></li>
+        <li></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="admin">Admin Login</a></li>
+        <li><a ui-sref="admin">ADMIN LOGIN</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -8,6 +8,7 @@ html,body{
 body{
 	color:#666;
 	font-size:100%;
+	font-family: helvetica;
 }
 
 /*
@@ -111,9 +112,18 @@ nav .cart{
 	top: -120px;
 }*/
 
+.top {
+	background-color: white;
+}
+
+.top_font {
+	font-size: 15px;
+}
+
 
 #ss-logo{
 	max-height: 60px;
+	position: relative;
 }
 
 #cart_total {

@@ -7,7 +7,11 @@
 	function ShopCtrl($scope,productSrv,$state, $stateParams,product){
 		var shopVm = this;
 		//TODO #3 Capture resolved products for view
-		shopVm.products;
+		shopVm.products = productSrv.products;
+
+		shopVm.curPage = 0;
+	  	shopVm.productsPerPage = 8;
+	  	shopVm.numPages = Math.ceil(shopVm.products.length/shopVm.productsPerPage);
 
 		shopVm.categories = [
 			{label:'All',value:''},
