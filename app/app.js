@@ -32,6 +32,20 @@
 				controller:'ShopCtrl as ctrl',
 			})
 
+			//for contact page
+			.state('contact', {
+				url:'/contact',
+				templateUrl:'site/partials/contact.html',
+				controller:'ShopCtrl as ctrl',
+			})
+
+			//for careers page
+			.state('careers', {
+				url:'/careers',
+				templateUrl:'site/partials/careers.html',
+				controller:'ShopCtrl as ctrl',
+			})
+
 
 			.state('view-product',{
 				url:'/view-product/:productId',

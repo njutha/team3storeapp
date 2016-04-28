@@ -37,115 +37,17 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<!-- <div class="container"> -->
-		<!-- TO DO #3: SET CATEGORY SEARCH AND SET FOCUS CLASS-->
-		<!-- <ul class="product-nav">
-			<li ><a>All</a></li>
-			<li ><a>Basketball</a></li>
-			<li ><a>Soccer</a></li>
-			<li ><a>Football</a></li>
-			<li ><a>Baseball</a></li>
-			<li ><a>Accessories</a></li>
-		</ul>
-</div>	 -->
+<section class="about_page">
+	<h1 id="shop_header">CONTACT US</h1><BR>
+	<img src="../assets/img/contact_image.png" class="about_image">
+<BR><BR>
+	<P class="about_text">
+		<B>Phone:</B> 1-800-hang-out<BR>
+    <B>Email:</B> contact@hangshop.ca
 
-<section>
-	<h1 id="shop_header">WELCOME TO THE HANG SHOP</h1><BR>
-	<div class="sales">
-		<img src="assets/img/sale_pants.png">
-		<img src="assets/img/sale_shoes.png">
-	</div>
-
-	<center><BR><BR>
-		 <div class="pagination">
- 
-		    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage - 1" ng-disabled="ctrl.curPage == 0">
-		     
-		    </button>
-    
-    			PAGE {{ctrl.curPage + 1}} OF {{ctrl.numPages}}
-    
-		    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage + 1" ng-disabled="ctrl.curPage >= 2">
-		     
-		    </button>
-  		</div>
-	</center>
-
-	<h3 id="shop_subheader">{{ctrl.category}}</h3> <!--should dynamically change -->
-	<div class="content-wrapper">
-		<div class="row">
-			<!-- TODO #3: SHOW PRODUCTS -->
-			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products | filter: {category: ctrl.category, name: srch.result}">
-				<div id="product-card" class="product-card">
-					
-					<!-- SET PRODUCT IMAGE -->
-					<div class="product-img"  ng-click="ctrl.viewProduct(product)" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
-					</div>
-
-					<div class="product-info">
-						<div class="product-name">
-							<!-- SET PRODUCT NAME -->
-							{{product.name}}
-							<a><img src="assets/img/plus.png "ng-click="ctrl.addToCart(product)" class="plus_icon"></a>
-						</div>
-						<!-- <div class="product-brand"> -->
-							<!-- SET PRODUCT Description -->
-						<!-- 	<em>{{product.description}}</em>
-						</div> -->
-						<div class="product-cost">
-							<!-- SET PRODUCT PRICE WITH FILTER -->
-							{{product.price | currency}}
-			
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-
+	</P>
+<BR>
 </section>
-		<!-- <ul class="left-nav">
-			<li><a ui-sref="auth">Admin Login</a>
-			</li>
-		</ul> -->
-
-
-<!-- <section class="top-content" role="topbanner">
-	<div class="content-wrapper">
-		<div class="table-view">
-			<div class="table-cell">
-				<div class="content">		
-					<h1>
-
-					</h1>
-					<h3>
-				
-					</h3>
-
-
-					<div class="search_bar">
-
-					<div>
-
-						<form>
-							TO DO #3: ENABLE PRODUCT SEARCH
-							<div class="form-container">
-								<input type="text" class="form-control"  placeholder="Search for a brand or item" >
-								<a class="search-btn"><img src="assets/img/icon-search@2x.png"></a>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-
-
-
 <nav class="navbar navbar-default top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
