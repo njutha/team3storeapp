@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,15 +8,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#"><img id="ss-logo" src="assets/img/ss-logo.png"></a>
+      <a href="#"><img id="ss-logo" src="assets/img/hang-shop.png"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a ng-click="ctrl.openCart()"><img src="assets/img/img-cart.png" style="width: 30px;"></a></li>
-        <li id="cart_total">{{ctrl.cart.length}}</li>
+      <ul class="nav navbar-nav navbar-right top_font">
+        <li><a href="#">HOME PAGE <span class="sr-only">(current)</span></a></li>
+        
+        <li><a ng-click="ctrl.openCart()"><img src="assets/img/img-cart.png" id="shop-cart"></a></li>
+        <li id="cart_total" class="number">{{ctrl.cart.length}}</li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -36,14 +37,14 @@
 			<img src="{{ctrl.product.image}}" id="product-page-pic">
       <br>
       <br>
-      <span>Qty: </span><input class="form-group" type="number" value="1" >
-      <button class="btn btn-primary prod-page-add" ng-click="ctrl.addToCart(ctrl.product)">Add To Cart</button>
+      <H2>QUANTITY: </H2><input class="form-group" type="number" value="1" >
+      <button class="btn btn-info prod-page-add" ng-click="ctrl.addToCart(ctrl.product)">ADD TO CART</button>
     
 		</div>
 		
 
 		
 
-		<button class="btn btn-default" ui-sref='shop' style="float: right;">Keep Shopping!</button>
+		<button class="btn btn-info" ui-sref='shop' style="float: right;">KEEP SHOPPING</button>
 	</div>
 </div>

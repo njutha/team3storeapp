@@ -51,7 +51,8 @@
 				status: true
 			}
 			productSrv.addProduct(product);	
-			// console.log(productVm.name,productVm.description, productVm.price)	
+			// console.log(productVm.name,productVm.description, productVm.price)
+			
 		}
 
 		function updateProduct(){

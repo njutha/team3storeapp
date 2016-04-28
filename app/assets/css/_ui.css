@@ -127,9 +127,16 @@ nav .cart{
 	background-color: white;
 }
 
+.pagination {
+	margin: auto;
+	text-align: center;
+	font-size: 15px;
+}
+
 .sales {
 	margin: auto;
 	margin-left: 20%;
+	padding: 3px;
 }
 
 .top_font {
@@ -140,6 +147,7 @@ nav .cart{
 #ss-logo{
 	max-height: 60px;
 	position: relative;
+	top: 5px;
 }
 
 #cart_total {
@@ -165,7 +173,7 @@ nav .cart{
 	text-align: center;
 	color: black;
 	text-transform: uppercase;
-	font-weight: lighter;
+	font-weight: bold;
 	font-family: arial;
 }
 
@@ -177,7 +185,7 @@ nav .cart{
 }
 
 #shop-cart {
-	width: 30px;
+	width: 40px;
 }
 
 #shop-cart:hover {
