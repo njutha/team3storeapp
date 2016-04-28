@@ -9,6 +9,14 @@
 		//TODO #3 Capture resolved products for view
 		shopVm.products;
 
+		shopVm.categories = [
+			{label:'Shirts',value:'shirts'},
+			{label:'Pants',value:'pants'},
+			{label:'Shoes',value:'shoes'},
+			{label:'Outerwear',value:'outerwear'},
+			{label:'Accessories',value:'accessories'},
+		];
+		
 		if (product) {
 			shopVm.product = product.data.product;
 		}

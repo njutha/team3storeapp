@@ -17,15 +17,10 @@
         <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a ng-model="selected.category">All</a></li>
-            <li><a href="#">Basketball</a></li>
-            <li><a href="#">Soccer</a></li>
-            <li><a href="#">Football</a></li>
-            <li><a href="#">Baseball</a></li>
+          <select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
+			</select>
             <!-- <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li> -->
-          </ul>
         </li>
         <li>
         	<form class="navbar-form navbar-left" role="search">
@@ -61,7 +56,7 @@
 	<div class="content-wrapper">
 		<div class="row">
 			<!-- TODO #3: SHOW PRODUCTS -->
-			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products | filter:{name: srch.result}">
+			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products | filter: {category: ctrl.category, name: srch.result}">
 				<div id="product-card" class="product-card">
 					
 					<!-- SET PRODUCT IMAGE -->
