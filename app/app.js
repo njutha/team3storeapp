@@ -25,6 +25,13 @@
 					}
 				}
 			})
+			//for about page
+			.state('about', {
+				url:'/about',
+				templateUrl:'site/partials/about.html',
+				controller:'ShopCtrl as ctrl',
+			})
+
 
 			.state('view-product',{
 				url:'/view-product/:productId',

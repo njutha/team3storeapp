@@ -61,6 +61,7 @@ ul{
 	width:100%;
 }
 
+
 .custom {
 	background-color: white;
 	color: black;
@@ -342,7 +343,8 @@ Product view
 	color:whitesmoke;
 	cursor: pointer;
 	cursor:hand;
-	transform: scale(1.01);
+	opacity: 0.6;
+	transform: scale(1.06);
 }
 #product-card .product-img{
 	width:100%;
