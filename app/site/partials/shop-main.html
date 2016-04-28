@@ -1,35 +1,106 @@
-<nav class="topheader">
-	<div class="content-wrapper">
-		<ul class="left-nav">
-			<li><img src="assets/img/logo_logo.png" class="first_logo"></li>
-		</ul>
-		<ul class="right-nav">
-			<li>
-				<i class="fa fa-shopping-cart"></i>
-				<span class="cart" ng-click="ctrl.openCart()">Shopping Cart</span>
-				<!-- count how many items in cart -->
-				<span style="border: 2px solid red">{{ctrl.cart.length}}</span>
-			</li>
-			<li>
-			<div>
-			
-			</div>
-			</li>
-		</ul>
-		<ul class="left-nav">
-			<li><a ui-sref="auth">Admin Login</a>
-			</li>
-		</ul>
-	</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#"><img id="ss-logo" src="assets/img/ss-logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ng-model="selected.category">All</a></li>
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Soccer</a></li>
+            <li><a href="#">Football</a></li>
+            <li><a href="#">Baseball</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
+        </li>
+        <li>
+        	<form class="navbar-form navbar-left" role="search">
+       			<div class="form-group">
+          			<input type="text" class="form-control" placeholder="Search for an item.." ng-model="srch.result">
+        		</div>
+        		<!-- <button type="submit" class="btn btn-default">Go</button> -->
+      		</form>
+        </li>
+        
+        <li><a ng-click="ctrl.openCart()"><img src="assets/img/img-cart.png" style="width: 30px;"></a></li>
+        <li id="cart_total">{{ctrl.cart.length}}</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
-<section class="top-content" role="topbanner">
+<!-- <div class="container"> -->
+		<!-- TO DO #3: SET CATEGORY SEARCH AND SET FOCUS CLASS-->
+		<!-- <ul class="product-nav">
+			<li ><a>All</a></li>
+			<li ><a>Basketball</a></li>
+			<li ><a>Soccer</a></li>
+			<li ><a>Football</a></li>
+			<li ><a>Baseball</a></li>
+			<li ><a>Accessories</a></li>
+		</ul>
+</div>	 -->
+
+<section>
+	<h1 id="shop_header">SHOP</h1>
+	<h3 id="shop_subheader">category</h3> <!--should dynamically change -->
+	<div class="content-wrapper">
+		<div class="row">
+			<!-- TODO #3: SHOW PRODUCTS -->
+			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products | filter:{name: srch.result}">
+				<div id="product-card" class="product-card">
+					
+					<!-- SET PRODUCT IMAGE -->
+					<div class="product-img"  ng-click="ctrl.viewProduct(product)" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
+					</div>
+
+					<div class="product-info">
+						<div class="product-name">
+							<!-- SET PRODUCT NAME -->
+							{{product.name}}
+							<a><img src="assets/img/plus.png "ng-click="ctrl.addToCart(product)" class="plus_icon"></a>
+						</div>
+						<!-- <div class="product-brand"> -->
+							<!-- SET PRODUCT Description -->
+						<!-- 	<em>{{product.description}}</em>
+						</div> -->
+						<div class="product-cost">
+							<!-- SET PRODUCT PRICE WITH FILTER -->
+							{{product.price | currency}}
+			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<!-- <ul class="left-nav">
+			<li><a ui-sref="auth">Admin Login</a>
+			</li>
+		</ul> -->
+
+
+<!-- <section class="top-content" role="topbanner">
 	<div class="content-wrapper">
 		<div class="table-view">
 			<div class="table-cell">
 				<div class="content">		
 					<h1>
-						
 
 					</h1>
 					<h3>
@@ -42,7 +113,7 @@
 					<div>
 
 						<form>
-							<!-- TO DO #3: ENABLE PRODUCT SEARCH -->
+							TO DO #3: ENABLE PRODUCT SEARCH
 							<div class="form-container">
 								<input type="text" class="form-control"  placeholder="Search for a brand or item" >
 								<a class="search-btn"><img src="assets/img/icon-search@2x.png"></a>
@@ -53,69 +124,30 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-
-<section class="secondary-nav" role="sub-nav">
-	<div class="content-wrapper">
-		<!-- TO DO #3: SET CATEGORY SEARCH AND SET FOCUS CLASS-->
-		<ul class="product-nav">
-			<li ><a>All</a></li>
-			<li ><a>Basketball</a></li>
-			<li ><a>Soccer</a></li>
-			<li ><a>Football</a></li>
-			<li ><a>Baseball</a></li>
-			<li ><a>Accessories</a></li>
-		</ul>
-	</div>
-</section>
-
-<section class="about">
-	<div>
-		<!--where to enter main about text (after products are moved)-->
-	</div>
-</section>
-
-<section class="product-view" role="product-view">
-	<div class="content-wrapper">
-		<div class="row">
-			<!-- TODO #3: SHOW PRODUCTS -->
-			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products">
-				<div id="product-card" class="product-card">
-					<div class="product-buy">
-						<div class="table-view">
-							<div class="table-cell">
-								<i ng-click="ctrl.addToCart(product)" class="fa fa-shopping-cart"></i>
-							</div>
-						</div>
-					</div>
-					<!-- SET PRODUCT IMAGE -->
-					<div class="product-img"  ng-click="ctrl.viewProduct(product)" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
-					</div>
-
-					<div class="product-info">
-						<div class="product-name">
-							<!-- SET PRODUCT NAME -->
-							{{product.name}}
-							
-						</div>
-						<div class="product-brand">
-							<!-- SET PRODUCT Description -->
-							<em>{{product.description}}</em>
-						</div>
-						<div class="product-cost">
-							<!-- SET PRODUCT PRICE WITH FILTER -->
-							{{product.price}}
-			
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<nav class="footer">
-	<div class="footer_text">
-		Welcome to First Pick, your one-stop shop for sports apparel.
-	</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Contact <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="admin">Admin Login</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+	

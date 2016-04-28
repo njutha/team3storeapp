@@ -45,7 +45,7 @@ Globals
 }
 .content-wrapper{
 	max-width:70.5em;
-	margin:0px auto;
+	margin:50px auto;
 	height:100%;
 }
 
@@ -75,9 +75,9 @@ a{
 Nav
 */
 
-nav{
-	height:155px;
-	line-height:155px;
+/*/*nav{
+	/*height:155px;*/
+	/*line-height:155px;
 	color:#000000;
 	border-bottom:1px solid #d8d8d8;
 	box-shadow: 0 4px 2px -2px #d8d8d8;
@@ -109,6 +109,44 @@ nav .cart{
 	position: relative;
 	left: 180px;
 	top: -120px;
+}*/
+
+
+#ss-logo{
+	max-height: 60px;
+}
+
+#cart_total {
+	position: absolute;
+	top: 5px;
+	right: 25px;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+.plus_icon{
+	width: 10px;
+	float: right;
+}
+
+.plus_icon:hover{
+	width: 20px;
+	cursor: pointer;
+	cursor:hand;
+}
+
+#shop_header{
+	text-align: center;
+	color: black;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+#shop_subheader{
+	text-align: center;
+	color: black;
+	text-transform: lowercase;
+	font-weight: lighter;
 }
 
 /*
@@ -157,7 +195,7 @@ Top-content
 	display: inline-block;
 }
 
-.top-content .search-btn{
+.search-btn{
 	position: absolute;
 	background:#000000;
 	height:40px;
@@ -169,7 +207,7 @@ Top-content
 	right:0px;
 
 }
-.top-content .search-btn img{
+.search-btn img{
 	width:18px;
 	margin-top:11px;
 }
@@ -246,10 +284,11 @@ Product view
 	bottom: 10px;
 }
 
-#product-card .product-buy:hover .fa{
+#product-card .product-img:hover{
 	color:whitesmoke;
 	cursor: pointer;
 	cursor:hand;
+	transform: scale(1.01);
 }
 #product-card .product-img{
 	width:100%;
@@ -274,6 +313,11 @@ Product view
 	color:#000000;
 	font-weight:500;
 	margin:10px 0px;
+}
+
+#product-page-pic{
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .footer {
