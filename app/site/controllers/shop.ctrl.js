@@ -10,11 +10,12 @@
 		shopVm.products;
 
 		shopVm.categories = [
+			{label:'All',value:''},
 			{label:'Shirts',value:'shirts'},
 			{label:'Pants',value:'pants'},
 			{label:'Shoes',value:'shoes'},
 			{label:'Outerwear',value:'outerwear'},
-			{label:'Accessories',value:'accessories'},
+			{label:'Accessories',value:'accessories'}
 		];
 		
 		if (product) {
