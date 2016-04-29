@@ -12,7 +12,7 @@
 
 			$stateProvider
 			.state('splash', {
-				url:'/splash',
+				url:'/',
 				templateUrl:'site/partials/shop-splash.html',
 				// controller:'ShopCtrl as ctrl',
 				resolve:{
@@ -23,7 +23,7 @@
 			})
 
 			.state('shop',{
-				url:'/',
+				url:'/main',
 				templateUrl:'site/partials/shop-main.html',
 				controller:'ShopCtrl as ctrl',
 				//TODO #3 resolve products before main page load
