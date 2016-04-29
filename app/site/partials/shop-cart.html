@@ -21,29 +21,62 @@
 			<td><button ng-click="ctrl.removeFromCart(items)" class="btn btn-info">REMOVE FROM CART</button></td>
 		</tr>
 	</table>
-	<BR>
-	<h1 class="">ADD YOUR BILLING INFORMATION</h1><BR>
-
-	<form name="add-billing" class="billing_form">
-		<div>
-			<label>YOUR NAME</label>
-			<input type="text" name="name" placeholder="Enter name" ng-model="ctrl.name" required>
-		</div><BR>
-		<div>
-			<label>YOUR EMAIL</label>
-			<input type="text" name="image" placeholder="Enter email" ng-model="ctrl.image" required>
-		</div><BR>
-		<div>
-			<label>YOUR PHONE NUMBER</label>
-			<input type="text" name="name" ng-model="ctrl.description" placeholder="Enter phone number" required></input>
-		</div><BR>
-
-		<div>
-			<label>YOUR ADDRESS</label>
-			<input type="text" name="name" ng-model="ctrl.description" placeholder="Enter address" required></textarea>
-		</div>
-	</form>
-	<BR>
-	<button ng-click="ctrl.submitOrder()" class="btn btn-info">SUBMIT YOUR ORDER</button>
-
+	<h1>BILLING INFORMATION</h1>
+		<form class="form-horizontal">
+		  <div class="form-group">
+		    <label for="fullname" class="col-sm-2 control-label">Full Name</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="fullname">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="email" class="col-sm-2 control-label">Email</label>
+		    <div class="col-sm-10">
+		      <input type="email" class="form-control" id="email">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="phone" class="col-sm-2 control-label">Phone Number</label>
+		    <div class="col-sm-10">
+		      <input type="tel" class="form-control" id="phone">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="street" class="col-sm-2 control-label">Street Address</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="street">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="city" class="col-sm-2 control-label">City/Town</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="city">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="country" class="col-sm-2 control-label">Country</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="country">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="ncard" class="col-sm-2 control-label">Name on Card</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="ncard">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="cardno" class="col-sm-2 control-label">Card No.</label>
+		    <div class="col-sm-10">
+		      <input type="number" class="form-control" id="cardno">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="cv" class="col-sm-2 control-label">CV</label>
+		    <div class="col-sm-10">
+		      <input type="number" class="form-control" id="cv">
+		    </div>
+		  </div>
+		<button ng-click="ctrl.submitOrder()" class="btn btn-info">SUBMIT YOUR ORDER</button>
+		</form>
 <section> 

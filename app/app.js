@@ -8,7 +8,7 @@
 		.module('shopApp')
 		.config(function($stateProvider,$urlRouterProvider, $httpProvider){
 			
-			$urlRouterProvider.otherwise('/splash');
+			$urlRouterProvider.otherwise('/');
 
 			$stateProvider
 			.state('splash', {
