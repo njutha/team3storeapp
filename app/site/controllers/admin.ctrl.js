@@ -14,10 +14,10 @@
 			$state.go('admin.dash');
 		}
 					
-		// adminVm.products;
-		// if(adminVm.products.length > 0 ){
-		// 	adminVm.is_products = true;
-		// }
+		adminVm.products = productSrv.products;
+		if(adminVm.products.length > 0 ){
+			adminVm.is_products = true;
+		}
 
 		//watch for updates to products object
 		$scope.$watch(function(){

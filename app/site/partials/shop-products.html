@@ -1,0 +1,67 @@
+<section>
+	<h1 id="shop_header">WELCOME TO THE HANG SHOP</h1><BR>
+	<div class="sales">
+		<img src="assets/img/sale_pants.png">
+		<img src="assets/img/sale_shoes.png">
+	</div>
+<div class="content-wrapper">
+	<div class="row">
+		<div class="col-md-4">
+			<span class="dropdown"><span>CATEGORY: </span>
+          		<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category"></select>
+      		</span>
+		</div>
+		<div class="col-md-4">
+			<div class="pagination">
+			    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage - 1" ng-disabled="ctrl.curPage == 0">
+			    </button>
+	    
+	    			PAGE {{ctrl.curPage + 1}} OF {{ctrl.numPages}}
+	    
+			    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage + 1" ng-disabled="ctrl.curPage >= 2">
+			    </button>
+  			</div>
+		</div>
+		<div class="col-md-4">
+			<span>
+	        	<form role="search">
+	       			<div class="form-group">
+	          			<input type="text" class="form-control" placeholder="SEARCH THE STORE" ng-model="srch.result">
+	        		</div>
+	      		</form>
+	        </span>
+		</div>
+	</div>
+    </div>
+	<h3 id="shop_subheader">{{ctrl.category}}</h3>
+	<div class="content-wrapper">
+		<div class="row">
+			<!-- TODO #3: SHOW PRODUCTS -->
+			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products
+			| filter: {category: ctrl.category, name: srch.result}
+			| limitTo:ctrl.productsPerPage:(ctrl.curPage * ctrl.productsPerPage)">
+				<div id="product-card" class="product-card">
+					
+					<!-- SET PRODUCT IMAGE -->
+					<div class="product-img"  ng-click="ctrl.viewProduct(product)" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
+					</div>
+
+					<div class="product-info">
+						<div class="product-name">
+							<!-- SET PRODUCT NAME -->
+							{{product.name}}
+							<a><img src="assets/img/plus.png "ng-click="ctrl.addToCart(product)" class="plus_icon"></a>
+						</div>
+						<div class="product-cost">
+							<!-- SET PRODUCT PRICE WITH FILTER -->
+							{{product.price | currency}}
+			
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>

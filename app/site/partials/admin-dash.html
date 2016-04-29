@@ -7,23 +7,24 @@
 </div>
 
 <div ng-show="ctrl.is_products">
-
+	
 	<table class="products-list table custom">
 		<tr>
+			<th>IMAGE</th>
 			<th>CATEGORY</th>
 			<th>NAME</th>
-			<th>IMAGE</th>
 			<th>PRICE</th>
 			<th>QUANTITY</th>
 			<th>&nbsp;</th>
+			<th>&nbsp;</th>
 		</tr>
 		<tr ng-repeat="product in ctrl.products">
+			<td><img src="{{product.image}}" class="admin_images"></td>
 			<td>{{product.category}}</td>
 			<td>{{product.name}}</td>
-			<td><img src="{{product.image}}" class="admin_images"></td>
 			<td>{{product.price}}</td>
 			<td>{{product.quantity}}</td>
-			<td><button ng-click="ctrl.editProduct(product)" class="btn btn-info">EDIT PRODUCT</button></td>
+			<td><i class="fa fa-edit" ng-click="ctrl.editProduct(product)"></i></td>
 		</tr>
 	</table>
 

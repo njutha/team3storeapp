@@ -33,7 +33,7 @@
 		// console.log(product.data.product);
 
 		shopVm.viewProduct = function(product) {
-			$state.go('view-product',{productId: product.id});
+			$state.go('shop.view-product',{productId: product.id});
 		};
 
 		//watch for any changes to model data
@@ -46,7 +46,7 @@
 
 		shopVm.openCart = function(){
 			// alert("CHECKCHECK")
-			$state.go('cart')
+			$state.go('shop.cart')
 		}
 
 		shopVm.submitOrder = function(){
@@ -59,7 +59,7 @@
 			shopVm.cart.splice(0,shopVm.cart.length);
 			console.log("this is the cart")
 			console.log(shopVm.cart);
-			$state.go('confirmation');
+			$state.go('shop.confirmation');
 		}
 
 		shopVm.removeFromCart = function(productId){

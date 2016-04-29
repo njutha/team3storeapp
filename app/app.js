@@ -8,9 +8,20 @@
 		.module('shopApp')
 		.config(function($stateProvider,$urlRouterProvider, $httpProvider){
 			
-			$urlRouterProvider.otherwise('/');
+			$urlRouterProvider.otherwise('/splash');
 
 			$stateProvider
+			.state('splash', {
+				url:'/splash',
+				templateUrl:'site/partials/shop-splash.html',
+				// controller:'ShopCtrl as ctrl',
+				resolve:{
+					product:function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
+			})
+
 			.state('shop',{
 				url:'/',
 				templateUrl:'site/partials/shop-main.html',
@@ -25,9 +36,21 @@
 					}
 				}
 			})
+
+			.state('shop.products', {
+				url:'products',
+				templateUrl:'site/partials/shop-products.html',
+				controller:'ShopCtrl as ctrl',
+				resolve:{
+					product:function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
+			})
+
 			//for about page
-			.state('about', {
-				url:'/about',
+			.state('shop.about', {
+				url:'about',
 				templateUrl:'site/partials/about.html',
 				controller:'ShopCtrl as ctrl',
 				resolve:{
@@ -37,8 +60,8 @@
 				}
 			})
 
-			.state('confirmation', {
-				url:'/confirmation',
+			.state('shop.confirmation', {
+				url:'confirmation',
 				templateUrl:'site/partials/confirmation.html',
 				controller:'ShopCtrl as ctrl',
 				resolve:{
@@ -49,8 +72,8 @@
 			})
 
 			//for contact page
-			.state('contact', {
-				url:'/contact',
+			.state('shop.contact', {
+				url:'contact',
 				templateUrl:'site/partials/contact.html',
 				controller:'ShopCtrl as ctrl',
 				resolve:{
@@ -61,8 +84,8 @@
 			})
 
 			//for careers page
-			.state('careers', {
-				url:'/careers',
+			.state('shop.careers', {
+				url:'careers',
 				templateUrl:'site/partials/careers.html',
 				controller:'ShopCtrl as ctrl',
 				resolve:{
@@ -73,8 +96,8 @@
 			})
 
 
-			.state('view-product',{
-				url:'/view-product/:productId',
+			.state('shop.view-product',{
+				url:'view-product/:productId',
 				templateUrl:'site/partials/product-page.html',
 				controller:'ShopCtrl as ctrl',
 				resolve:{
@@ -84,8 +107,8 @@
 				}
 			})
 
-			.state('cart',{
-				url: '/mycart',
+			.state('shop.cart',{
+				url: 'cart',
 				templateUrl: 'site/partials/shop-cart.html',
 				controller: 'ShopCtrl as ctrl',
 				//resolve orders?

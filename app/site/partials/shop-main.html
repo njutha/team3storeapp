@@ -1,122 +1,39 @@
-<nav class="navbar navbar-default top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="#"><img id="ss-logo" src="assets/img/hang-shop.png"></a>
+      <img id="ss-logo" src="assets/img/hang-shop.png" ui-sref="shop.products"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right top_font">
-        <li><a href="#">HOME<span class="sr-only">(current)</span></a></li>
-        <li class="dropdown"><a> <span>CATEGORY: </span>
-          <select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
-			</select>
-      </a>
-        </li>
-        <li>
-        	<form class="navbar-form navbar-left" role="search">
-       			<div class="form-group">
-          			<input type="text" class="form-control" placeholder="SEARCH THE STORE" ng-model="srch.result">
-        		</div>
-      		</form>
-        </li>
-        
-        <li><a ui-sref="cart"><img src="assets/img/img-cart.png" id="shop-cart"></a></li>
-        <li id="cart_total" class="number">{{ctrl.cart.length}}</li>
+        <li class="nav-text" ui-sref="shop.products">HOME</li>
+        <li class="nav-text" ui-sref="shop.about">ABOUT US</li>
+        <li class="nav-text" ui-sref="shop.contact">CONTACT US</li>
+        <li ui-sref="shop.cart"><img src="assets/img/img-cart.png" id="shop-cart"></li>
+        <span id="cart_total" class="number badge">{{ctrl.cart.length}}</span>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<section>
-	<h1 id="shop_header">WELCOME TO THE HANG SHOP</h1><BR>
-	<div class="sales">
-		<img src="assets/img/sale_pants.png">
-		<img src="assets/img/sale_shoes.png">
-	</div>
+<article class="main-content">
+  <div ui-view></div>
+</article>
 
-	<center><BR><BR>
-		 <div class="pagination">
- 
-		    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage - 1" ng-disabled="ctrl.curPage == 0">
-		    </button>
-    
-    			PAGE {{ctrl.curPage + 1}} OF {{ctrl.numPages}}
-    
-		    <button class="btn btn-info" ng-click="ctrl.curPage = ctrl.curPage + 1" ng-disabled="ctrl.curPage >= 2">
-		    </button>
-  		</div>
-	</center>
-
-	<h3 id="shop_subheader">{{ctrl.category}}</h3>
-	<div class="content-wrapper">
-		<div class="row">
-			<!-- TODO #3: SHOW PRODUCTS -->
-			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products
-			| filter: {category: ctrl.category, name: srch.result}
-			| limitTo:ctrl.productsPerPage:(ctrl.curPage * ctrl.productsPerPage)">
-				<div id="product-card" class="product-card">
-					
-					<!-- SET PRODUCT IMAGE -->
-					<div class="product-img"  ng-click="ctrl.viewProduct(product)" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
-					</div>
-
-					<div class="product-info">
-						<div class="product-name">
-							<!-- SET PRODUCT NAME -->
-							{{product.name}}
-							<a><img src="assets/img/plus.png "ng-click="ctrl.addToCart(product)" class="plus_icon"></a>
-						</div>
-						<div class="product-cost">
-							<!-- SET PRODUCT PRICE WITH FILTER -->
-							{{product.price | currency}}
-			
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-
-</section>
-
-<nav class="navbar navbar-default top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav top_font">
-
-        <li><a ng-click=""><img src="assets/img/mini-logo.png" id="ss-logo-two"></a></li>
-        
-        <li><a href="#/contact">CONTACT US <span class="sr-only">(current)</span></a></li>
-         <li><a href="#/about">ABOUT US</a></li>
-          <li><a href="#/careers">WORK FOR US</a></li>
-
-          <li><a href="#/auth">ADMIN LOGIN</a></li>
-     </ul>
-
-     </div>
-
-    <!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <ul class="nav navbar-nav top_font footer">
+        <li class="nav-text" ui-sref="shop.careers">WORK FOR US</li>
+        <li class="nav-text" ui-sref="auth">ADMIN LOGIN</li>
+        <li><img src="assets/img/mini-logo.png" id="ss-logo-two"></li>
+        <li class="nav-text">
+          <i class="fa fa-lg fa-facebook icon"></i>
+          <i class="fa fa-lg fa-twitter icon"></i>
+          <i class="fa fa-lg fa-instagram icon"></i>
+          <i class="fa fa-lg fa-youtube icon"></i>
+          <i class="fa fa-lg fa-googleplus icon"></i>
+        </li>
+     </ul>  </div>
 </nav>

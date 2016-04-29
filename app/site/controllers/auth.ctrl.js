@@ -11,7 +11,7 @@
 		authVm.auth_btn = 'Continue';
 
 		if(localStorage.authToken){
-			$state.go('admin.dash');
+			$state.go('admin');
 		}
 
 		//public functions
@@ -33,12 +33,12 @@
 				if(res.status == 200){
 					authVm.auth_btn = "Success";
 					//user exists
-					// if(res.data.user.length == 0){
-					// 	authVm.auth_btn = 'Invalid Password';	
-					// }
-					// else{
+					if(res.data.user.length == 1){
+						authVm.auth_btn = 'Invalid Password';	
+					}
+					else{
 						$state.go('admin.dash');
-					// }
+					}
 				}
 				
 			},function(res){
@@ -50,6 +50,3 @@
 	}
 
 })();
-
-
-
